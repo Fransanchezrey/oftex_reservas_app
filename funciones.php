@@ -29,18 +29,3 @@ function obtenerCSV($url, $usuario, $contrasena) {
 
     return $reservas;
 }
-
-function filtrarReservas($reservas, $busqueda) {
-    if (empty($busqueda)) return $reservas;
-
-    $filtrado = [];
-    foreach ($reservas as $reserva) {
-        foreach ($reserva as $valor) {
-            if (stripos($valor, $busqueda) !== false) {
-                $filtrado[] = $reserva;
-                break;
-            }
-        }
-    }
-    return $filtrado;
-}
