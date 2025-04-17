@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tablaBody = document.querySelector("#tablaReservas tbody");
     const inputBuscar = document.getElementById("busqueda");
     const btnDescargar = document.getElementById("descargarJson");
+    const btnLimpiar = document.getElementById("btnLimpiar");
 
 
  
@@ -35,6 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     inputBuscar.addEventListener("input", () => {
         reservasFiltradas = filtrarReservas(inputBuscar.value);
+    });
+
+    btnLimpiar.addEventListener("click", () => {
+        inputBuscar.value = ""; // Limpia el campo de búsqueda
+        mostrarReservas(RESERVAS); // Muestra todas las reservas
     });
 
     btnDescargar.addEventListener("click", () => {

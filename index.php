@@ -30,7 +30,7 @@ $reservas = obtenerCSV($url, $usuario, $contrasena);
     <div class="container">
         <h1>Reservas</h1>
         <input type="text" id="busqueda" placeholder="Buscar...">
-        <button id="btnBuscar">Buscar</button>
+        <button id="btnLimpiar">Limpiar</button>
         <table id="tablaReservas">
             <thead>
                 <tr>
