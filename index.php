@@ -18,7 +18,7 @@ $reservas = obtenerCSV($url, $usuario, $contrasena);
 
 <head>
     <meta charset="UTF-8">
-    <title>Reservas</title>
+    <title>Reservas OFTEX</title>
 
     <script>
         const RESERVAS = <?php echo json_encode($reservas); ?>;
@@ -27,8 +27,12 @@ $reservas = obtenerCSV($url, $usuario, $contrasena);
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="header">
+        <img src="imgs/logo_oftex.png" alt="Logo OFTEX" class="logo">
+        <h1> Reservas</h1>
+    </div>
+
     <div class="container">
-        <h1>Reservas</h1>
         <input type="text" id="busqueda" placeholder="Buscar...">
         <button id="btnLimpiar">Limpiar</button>
         <table id="tablaReservas">
